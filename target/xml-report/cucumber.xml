@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="28.764" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="As a user, I want to reach the pages I want by using the redirect icons of the site I shop on." name="The user accesses the relevant pages through the redirection icons." time="28.598">
+<system-out><![CDATA[
+* Go to "url"...............................................................passed
+* Clicks the Login buttonLink on the home page..............................passed
+* Login by entering valid "customerEmail" and "password" on the SignIn page..passed
+* Verify that the body redirect buttons "Playstore","Appstore","Home","NewProductDeals","AboutUs","Blog","Contact" are working..passed
+]]></system-out>
+</testcase>
+</testsuite>
