@@ -23,7 +23,7 @@ public class UserHomePageStepDef extends Base {
     @Given("Login by entering valid {string} and {string} on the SignIn page.")
     public void login_by_entering_valid_and_on_the_sign_ın_page(String email, String password) {
         ReusableMethods.wait(1);
-        userHomePage.loginUser(ConfigReader.getProperty(email), ConfigReader.getProperty(password));
+        ReusableMethods.loginUser(ConfigReader.getProperty(email), ConfigReader.getProperty(password));
         ReusableMethods.wait(1);
     }
     @Given("Verify that the body redirect buttons {string},{string},{string},{string},{string},{string},{string} are working.")

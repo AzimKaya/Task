@@ -1,10 +1,18 @@
 package utils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import pages.UserHomePage;
 import static org.junit.Assert.assertTrue;
 
-public class ReusableMethods {
+public class ReusableMethods extends UserHomePage {
 
+    public static void loginUser(String email, String password){
+        UserHomePage visitorHomePage=new UserHomePage();
+        UserHomePage.labelBoxLogin.sendKeys(email);
+        UserHomePage.ReusableMethods.wait(3);
+        UserHomePage.labelBoxPassword.sendKeys(password);
+        ReusableMethods.clickAndVerify(visitorHomePage.buttonSignIn);
+    }
       public static void clickAndVerify(WebElement element) {
             assertTrue(element.isDisplayed());
               assertTrue(element.isEnabled());

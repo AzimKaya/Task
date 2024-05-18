@@ -1,24 +1,17 @@
 package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.ReusableMethods;
 public class UserHomePage extends Base{
+protected static utils.ReusableMethods ReusableMethods;
 
-        public void loginUser(String email, String password){
-                UserHomePage visitorHomePage=new UserHomePage();
-                labelBoxLogin.sendKeys(email);
-                ReusableMethods.wait(3);
-                labelBoxPassword.sendKeys(password);
-                ReusableMethods.clickAndVerify(visitorHomePage.buttonSignIn);
-        }
         @FindBy(xpath = "(//*[text()='Login'])[1]")
         public WebElement linkLogin;//Hompage>> Email Login button
 
         @FindBy(xpath = "//input[@name='login']")
-        public WebElement labelBoxLogin;//Signpage>> Email address or phone Text Box
+        public static WebElement labelBoxLogin;//Signpage>> Email address or phone Text Box
 
         @FindBy(xpath = "//*[@name='password']")
-        public WebElement labelBoxPassword;//Signpage>> Password  Text Box
+        public static WebElement labelBoxPassword;//Signpage>> Password  Text Box
 
         @FindBy(xpath = "//button[@id='sign_in_btn']")
         public WebElement buttonSignIn;//Signpage>> Password SignIn button
